@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    networks:
+      - pedidos-net
+
+  pedidos:
+    build:
+      context: ./pedidos
+      dockerfile: Dockerfile
+    container_name: pedidos
+    networks:
+      - pedidos-net
+
+  pagamentos:
+    build:
+      context: ./pagamentos
+      dockerfile: Dockerfile
+    container_name: pagamentos
+    networks:
+      - pedidos-net
+
+  estoque:
+    build:
+      context: ./estoque
+      dockerfile: Dockerfile
+    container_name: estoque
+    networks:
+      - pedidos-net
+
+networks:
+  pedidos-net:
+    driver: bridge
