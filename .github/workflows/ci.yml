@@ -1,0 +1,23 @@
+name: CI Pipeline - Pedidos Veloz
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Build imagens Docker
+        run: |
+          docker build -t gateway ./gateway
+          docker build -t pedidos ./pedidos
+          docker build -t pagamentos ./pagamentos
+          docker build -t estoque ./estoque
+
+      - name: Validação básica
+        run: echo "Build realizado com sucesso"
