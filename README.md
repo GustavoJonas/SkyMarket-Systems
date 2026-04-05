@@ -4,7 +4,7 @@ Projeto acadêmico com foco em práticas modernas de Cloud DevOps , abordando co
 Contexto
 A Loja Veloz é um e-commerce de médio porte que cresceu rapidamente e passou a enfrentar problemas recorrentes na produção, como indisponibilidades durante implantações, dificuldade de escalar em picos de acesso e baixa rastreabilidade de falhas entre serviços.
 
-Este projeto propõe uma modernização da aplicação Pedidos Veloz , adotando uma arquitetura baseada em microsserviços e práticas nativas em nuvem.
+Este projeto propõe uma modernização da aplicação, adotando uma arquitetura baseada em microsserviços e práticas nativas em nuvem.
 
 Objetivos
 Padronizar o ambiente de desenvolvimento local
